@@ -14,13 +14,17 @@ int main(int argc, char ** argv) {
 
 	if (A == NULL) return -1;
 	if (b == NULL) return -2;
+	printf("\nMacierz A:\n");
 	printToScreen(A);
+	printf("Macierz B:\n");
 	printToScreen(b);
 	res = diag_elem(A,b);
-	if(res == 1)
+	if(res == 0)
 	{	
-		printf("Wybor elementu glownego");
+		printf("\nWybor elementu glownego\n");
+		printf("\nMacierz A:\n");
 		printToScreen(A);
+		printf("Macierz B:\n");
 		printToScreen(b);
 	}
 	if(res == 2)
@@ -58,6 +62,7 @@ int main(int argc, char ** argv) {
 			return 1;
 		}
 
+		printf("Macierz X:\n");
 		printToScreen(x);
 	  freeMatrix(x);
 	} else {

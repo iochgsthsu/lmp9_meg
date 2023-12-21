@@ -11,7 +11,7 @@ int diag_elem(Matrix *mat, Matrix *b)
 	double *tmp_wiersz = malloc(mat->c*sizeof(double));
 	double tmp_b;
 	double a = mat->data[0][0];
-	int i_max = 0;
+	int i_max = 1;
 	for(int i = 1 ; i<mat->r; i++)
 	{
 		if(a<mat->data[i][0])
@@ -53,7 +53,7 @@ int diag_elem(Matrix *mat, Matrix *b)
 
 	}
 	free(tmp_wiersz);	
-	return 1;
+	return 0;
 
 
 }
