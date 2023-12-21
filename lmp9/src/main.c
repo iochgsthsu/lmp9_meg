@@ -25,7 +25,7 @@ int main(int argc, char ** argv) {
 	}
 	if(res == 2)
 	{
-		fprintf(stderr, "blad nieprawidlowych rozmiarow macierzy");
+		fprintf(stderr, "blad nieprawidlowych rozmiarow macierzy\n");
 		return 1;
 
 	}
