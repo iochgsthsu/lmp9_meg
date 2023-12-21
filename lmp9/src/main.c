@@ -15,11 +15,33 @@ int main(int argc, char ** argv) {
 	if (b == NULL) return -2;
 	printToScreen(A);
 	printToScreen(b);
-
 	res = eliminate(A,b);
+	
+	if(res==1)
+	{
+		fprintf(stderr, "Macierz osobliwa - dzielenie przez 0\n");
+		return 1;
+	}
+	
+	if(res==2)
+	{
+		fprintf(stderr, "blad nieprawidlowych rozmiarow macierzy\n");
+		return 1;
+	}
+	
 	x = createMatrix(b->r, 1);
 	if (x != NULL) {
 		res = backsubst(x,A,b);
+		if(res == 1)
+		{
+			fprintf(stderr, "blad dzielenie przez 0 (element na diagonali = 0)\n");
+			return 1;
+		}
+		if(res == 2)
+		{
+			fprintf(stderr, "blad nieprawidlowych rozmiarow macierzy\n");
+			return 1;
+		}
 
 		printToScreen(x);
 	  freeMatrix(x);
