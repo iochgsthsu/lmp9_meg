@@ -3,3 +3,8 @@ all:
 
 test: all
 	bin/gauss dane/A dane/b
+	bin/gauss dane/A1 dane/b1
+	bin/gauss dane/A2 dane/b2
+	bin/gauss dane/A3 dane/b3
+	
+	
