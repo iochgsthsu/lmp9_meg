@@ -23,6 +23,12 @@ int main(int argc, char ** argv) {
 		printToScreen(A);
 		printToScreen(b);
 	}
+	if(res == 2)
+	{
+		fprintf(stderr, "blad nieprawidlowych rozmiarow macierzy");
+		return 1;
+
+	}
 
 	res = eliminate(A,b);
 	

@@ -3,6 +3,11 @@
 int diag_elem(Matrix *mat, Matrix *b)
 {
 
+	if(mat->r!=mat->c || mat->c!=b->r)
+	{
+		return 2;		 	
+	}
+	
 	double *tmp_wiersz = malloc(mat->c*sizeof(double));
 	double tmp_b;
 	double a = mat->data[0][0];
