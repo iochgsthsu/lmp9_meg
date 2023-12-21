@@ -8,18 +8,19 @@ int eliminate(Matrix *mat, Matrix *b){
     /**
   	 * Tutaj należy umieścić właściwą implemntację.
 		 */
-	
-
-
-
+	if(mat->r!=mat->c || mat->c!=b->r)
+	{
+		return 2;		 	
+	}
+				 
 	for(int k = 0; k<mat->r; k++)
 	{
 		double el_gl = mat->data[k][k];
 		if(el_gl==0)
 		{
-			fprintf(stderr, "macierz osobliwa - dzielenie przez 0");
 			return 1;
 		}
+		
 		for(int i = 1+k; i<mat->r; i++)
 		{
 			double el = mat->data[i][k];
