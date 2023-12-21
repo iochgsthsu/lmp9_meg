@@ -16,6 +16,14 @@ int main(int argc, char ** argv) {
 	if (b == NULL) return -2;
 	printToScreen(A);
 	printToScreen(b);
+	res = diag_elem(A,b);
+	if(res == 1)
+	{	
+		printf("Wybor elementu glownego");
+		printToScreen(A);
+		printToScreen(b);
+	}
+
 	res = eliminate(A,b);
 	
 	if(res==1)

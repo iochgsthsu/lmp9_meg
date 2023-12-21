@@ -48,7 +48,7 @@ int diag_elem(Matrix *mat, Matrix *b)
 
 	}
 	free(tmp_wiersz);	
-	return 0;
+	return 1;
 
 
 }
