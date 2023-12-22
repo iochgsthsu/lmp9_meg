@@ -1,7 +1,6 @@
 #include "gauss.h"
 #include "backsubst.h"
 #include "mat_io.h"
-#include "diag_elem.h"
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -18,21 +17,6 @@ int main(int argc, char ** argv) {
 	printToScreen(A);
 	printf("Macierz B:\n");
 	printToScreen(b);
-	res = diag_elem(A,b);
-	if(res == 0)
-	{	
-		printf("\nWybor elementu glownego\n");
-		printf("\nMacierz A:\n");
-		printToScreen(A);
-		printf("Macierz B:\n");
-		printToScreen(b);
-	}
-	if(res == 2)
-	{
-		fprintf(stderr, "blad nieprawidlowych rozmiarow macierzy\n");
-		return 1;
-
-	}
 
 	res = eliminate(A,b);
 	
