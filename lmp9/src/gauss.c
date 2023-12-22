@@ -84,6 +84,7 @@ int eliminate(Matrix *mat, Matrix *b){
 
 		}
 	}
+	free(tmp_wiersz);
 		return 0;
 }
 
